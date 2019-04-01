@@ -71,11 +71,11 @@ def all_holidays_with_bbq(holiday_hash)
   # include the string "BBQ"
   holiday_hash.collect do |season, holiday|
     holiday.collect do |holiday, item|
-     holiday if item.include?("BBQ")
-   else nil
+     if item.include?("BBQ")
+     else nil
    end
  end
- end
+
  
   
 
